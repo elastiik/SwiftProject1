@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PictureFilter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGN-cc-iPr">
+                                <rect key="frame" x="147" y="540" width="77" height="30"/>
+                                <state key="normal" title="Take Photo"/>
+                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="112" y="308" width="77" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DFO-de-MxA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIV-pb-jO7">
+                                <rect key="frame" x="350" y="513" width="110" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Apply Filter"/>
+                                <connections>
+                                    <action selector="applyFilter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vyh-pM-wOA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="och-7l-c3k">
+                                <rect key="frame" x="141" y="481" width="88" height="30"/>
+                                <state key="normal" title="Select Photo"/>
+                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="100" y="339" width="101" height="46"/>
+                                </variation>
+                                <connections>
+                                    <action selector="loadPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l7c-kr-oS3"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="nID-DN-fno">
+                                <rect key="frame" x="0.0" y="20" width="600" height="448"/>
+                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="480" id="eHN-rG-9Zy" userLabel="height = 200">
+                                        <variation key="widthClass=compact" constant="350"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="eHN-rG-9Zy"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="28" width="600" height="264"/>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="eHN-rG-9Zy"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="TGN-cc-iPr" secondAttribute="bottom" constant="82" id="1Cm-ZY-Uxj">
+                                <variation key="widthClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint firstItem="nID-DN-fno" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DVT-np-Xwy">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="TGN-cc-iPr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I7a-5v-XMk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EIV-pb-jO7" secondAttribute="bottom" constant="40" id="KO9-Pg-ybz">
+                                <variation key="widthClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="och-7l-c3k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qiw-m8-1xU"/>
+                            <constraint firstItem="nID-DN-fno" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="YUn-Rf-Ycn"/>
+                            <constraint firstItem="TGN-cc-iPr" firstAttribute="top" secondItem="och-7l-c3k" secondAttribute="bottom" constant="8" id="anP-fV-Y6V">
+                                <variation key="widthClass=compact" constant="-9"/>
+                            </constraint>
+                            <constraint firstItem="EIV-pb-jO7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kGm-Hb-rCz"/>
+                            <constraint firstItem="nID-DN-fno" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kRI-hT-vpl"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="DVT-np-Xwy"/>
+                                <exclude reference="YUn-Rf-Ycn"/>
+                                <exclude reference="kRI-hT-vpl"/>
+                                <exclude reference="Qiw-m8-1xU"/>
+                                <exclude reference="I7a-5v-XMk"/>
+                                <exclude reference="anP-fV-Y6V"/>
+                                <exclude reference="1Cm-ZY-Uxj"/>
+                                <exclude reference="KO9-Pg-ybz"/>
+                                <exclude reference="kGm-Hb-rCz"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="DVT-np-Xwy"/>
+                                <include reference="YUn-Rf-Ycn"/>
+                                <include reference="kRI-hT-vpl"/>
+                                <include reference="Qiw-m8-1xU"/>
+                                <include reference="I7a-5v-XMk"/>
+                                <include reference="anP-fV-Y6V"/>
+                                <include reference="1Cm-ZY-Uxj"/>
+                                <include reference="KO9-Pg-ybz"/>
+                                <include reference="kGm-Hb-rCz"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="nID-DN-fno" id="9we-nJ-PNA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="405"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image" width="320" height="213"/>
+    </resources>
+</document>
